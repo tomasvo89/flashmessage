@@ -1,52 +1,67 @@
-mos/cdatabase
+CFlashmsg
 =========
 
-[![Latest Stable Version](https://poser.pugx.org/leaphly/cart-bundle/version.png)](https://packagist.org/packages/mos/database)
-[![Build Status](https://travis-ci.org/mosbth/cdatabase.png?branch=master)](https://travis-ci.org/mosbth/cdatabase)
-[![Coverage Status](https://coveralls.io/repos/mosbth/cdatabase/badge.png)](https://coveralls.io/r/mosbth/cdatabase)
-[![Code Coverage](https://scrutinizer-ci.com/g/mosbth/cdatabase/badges/coverage.png?s=f999ab1961684a91050b095682f7ab7a13ccb534)](https://scrutinizer-ci.com/g/mosbth/cdatabase/)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mosbth/cdatabase/badges/quality-score.png?s=1c2fc1af0df7fb7ee1e4f379a81253583a750297)](https://scrutinizer-ci.com/g/mosbth/cdatabase/)
+Class CFlashmsg, a class whose purpose is to handle feedback information based on user's actions by means
+of flash messages.
 
-PHP classes for database handling upon PDO.
-
-Read an article about it here ["CDatabase - PHP classes för working with SQL queries and databases"](http://dbwebb.se/opensource/cdatabase)
-
-By Mikael Roos, me@mikaelroos.se.
+By Tomas Vo, tomasvo89@gmail.com
 
 
-
-License
+Instructions
 ------------------
 
-This software is free software and carries a MIT license.
+###1. Download
 
+First of all install by using composer. Add this code to your composer.json:
 
-
-History
------------------------------------
-
-
-v0.1.x (latest)
-
-* Added support for group by clause.
-* Reformatted config-files with comments.
-* Double check that lastInsertId works.
-* Adding debug mode to hide or display connection details when connect() fails.
-* Added error reporting to testprograms in webroot.
-* Added utility `webroot/check_driver.php` to see if and what PDO drivers are loaded.
-* Merged issue #1 from Emil to include limit and offset and made it work with MySQL.
-
-
-v0.1.0 (2014-04-17)
-
-* Using and modifying class `CDatabase` from Anax-oophp and merging with same class from Lydia.
-* Adding trait for `TSQLQueryBuilderBasic`.
-* Adding `webroot` with testfiles for SQLite, MySQL and general SQLBuilder.
-* Adding `composer.json` and publishing to Packagist as `mos/cdatabase`.
-
-
-
+```javascript
+"require": {
+    "tovo/cflashmsg": "dev-master"
+},
 ```
- .  
-..:  Copyright (c) 2013 - 2014 Mikael Roos, me@mikaelroos.se
+
+###2. Include CFlashmsg to your framework
+
+Add this code to your front-controller.
+
+```php
+$di->set('CFlashmsg', function() use ($di) { 
+    $message = new \tovo\CFlashmsg\CFlashmsg($di);  
+    return $message; 
+}); 
 ```
+
+Add the following codes to retrieve flash messages:
+
+For info messages:
+
+```php
+    $app->CFlashmsg->addInfo('This is an information message'); 
+```
+For error messages:
+
+```php
+    $app->CFlashmsg->addError('This is an error message'); 
+```
+
+For warning messages:
+
+```php
+    $app->CFlashmsg->addWarning('This is a warning message'); 
+```
+
+For success messages:
+
+```php
+    $app->CFlashmsg->addSuccess('This is a success message'); 
+```
+   
+The messages will be saved in the session, call these lines to print out the messages:
+    
+```php
+    $messages = $app->CFlashmsg->printMessage();
+    $app->views->addString($messages);
+```
+###3. Optional
+
+The class is compatible with Font Awesome.
