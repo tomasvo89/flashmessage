@@ -17,7 +17,7 @@ Install by using composer. Add this code to your composer.json:
 
 ```javascript
 "require": {
-    "tovo/flashmsg": "dev-master"
+    "tovo/flashmessage": "dev-master"
 },
 ```
 
