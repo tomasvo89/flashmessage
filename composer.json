@@ -1,0 +1,20 @@
+{
+    "name": "tovo/flashmessage",    
+    "type": "library",
+    "description": "Class to handle feedback information based on user's actions by generating
+    flash messages.",
+    "keywords": ["flash", "messages", "module", "feedback", "info"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomas Vo",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "tovo\\": "src/" }
+    }
+}

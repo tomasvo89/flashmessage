@@ -15,8 +15,6 @@ Thumbs.db
 
 
 # Package handling
-composer.json
 composer.lock
 vendor/.git
 
-README.md
