@@ -1,8 +1,7 @@
 {
     "name": "tovo/flashmessage",    
     "type": "library",
-    "description": "Class to handle feedback information based on user's actions by generating
-    flash messages.",
+    "description": "Class to handle feedback information by generating flash messages",
     "keywords": ["flash", "messages", "module", "feedback", "info"],
     "license": "MIT",
     "authors": [
