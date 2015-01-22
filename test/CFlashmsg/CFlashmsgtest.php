@@ -4,7 +4,6 @@ require_once(__DIR__ . '/../../src/CFlashmsg/CFlashmsg.php');
 class CFlashmsgTest extends \PHPUnit_Framework_TestCase{
 public function testAddMessage(){
   
-  use \Anax\DI\TInjectable;
   
 $test = new CFlashmsg();
 $messages[]=[
