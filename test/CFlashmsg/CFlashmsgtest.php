@@ -3,6 +3,7 @@ namespace Tovo\CFlashmsg;
 require_once(__DIR__ . '/../../src/CFlashmsg/CFlashmsg.php');
 class CFlashmsgTest extends \PHPUnit_Framework_TestCase{
 public function testAddMessage(){
+  
 $test = new CFlashmsg();
 $messages[]=[
 'content' => 'test',
