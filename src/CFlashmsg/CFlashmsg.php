@@ -1,25 +1,22 @@
 <?php
 
-namespace Anax\CFlashmsg;
+namespace tovo\CFlashmsg;
 
 /**
- * Class for flashing messages.
+ * Class generating flash messages.
  *
  */
 
+
 class CFlashmsg{
     
-use \Anax\DI\TInjectable;
     
-    /**
-    * Constructor sets di.
-    *
-    */
-     public function __construct($di){
-         $this->di = $di; 
-     }
     
-
+    public $sessionKey=null;
+    
+    public function __construct(){
+        $this->sessionKey = 'CFlashmsg';
+    }
     
     /** 
      * Adds a flash message to the session 
@@ -30,9 +27,9 @@ use \Anax\DI\TInjectable;
      * @return void 
      */ 
     public function addMessage($type, $content) {
-        if(!($this->session->get('CFlashmsg', [])) == null)
+        if (isset($_SESSION[$this->sessionKey]))
         {
-            $messages = $this->session->get('CFlashmsg', []);
+            $messages = $_SESSION[$this->sessionKey];
         }
         
         $messages[] = [
@@ -40,7 +37,7 @@ use \Anax\DI\TInjectable;
             'type' => $type,
         ];
         
-        $this->session->set('CFlashmsg', $messages);
+        $_SESSION[$this->sessionKey] = $messages;
     }
     
    
@@ -99,7 +96,7 @@ use \Anax\DI\TInjectable;
      * @return $html. 
      */
     public function printMessage() {
-        $messages = $this->session->get('CFlashmsg', []);
+        $messages = $_SESSION[$this->sessionKey];
         $html = '';
         
         foreach ($messages as $message){
@@ -118,8 +115,8 @@ use \Anax\DI\TInjectable;
      * @return void 
      */
     public function clearSession() {
-        $this->session->set('CFlashmsg', NULL);
+        $_SESSION[$this->sessionKey] = NULL;
     } 
     
     
-} 
+}
