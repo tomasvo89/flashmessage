@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/tovo/flashmessage.svg?branch=master)](https://travis-ci.org/tovo/flashmessage)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tovo/flashmessage/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tovo/flashmessage/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/tovo/flashmessage/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tovo/flashmessage/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tomasvo89/flashmessage/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tomasvo89/flashmessage/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/tomasvo89/flashmessage/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tomasvo89/flashmessage/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/tomasvo89/flashmessage/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tomasvo89/flashmessage/build-status/master)
 
 CFlashmsg
 =========
