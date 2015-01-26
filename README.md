@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/henam1/cfmessage.svg?branch=master)](https://travis-ci.org/tovo/flashmessage)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tovo/flashmessage/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/henam1/cfmessage/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/tovo/flashmessage/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/henam1/cfmessage/?branch=master)
+[![Build Status](https://travis-ci.org/tovo/flashmessage.svg?branch=master)](https://travis-ci.org/tovo/flashmessage)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tovo/flashmessage/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tovo/flashmessage/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/tovo/flashmessage/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tovo/flashmessage/?branch=master)
 
 CFlashmsg
 =========
